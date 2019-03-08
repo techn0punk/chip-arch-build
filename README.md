@@ -1,6 +1,6 @@
 How to build:
 
-* git clone https://github.com/mydzor/chip-arch-build.git
+* git clone https://github.com/techn0punk/chip-arch-build.git
 * cd chip-arch-build
 * git submodule init
 * git submodule update
