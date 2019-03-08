@@ -19,20 +19,20 @@ rm -rf rootfs/lib/modules/*
 # install additional packages
 pacman -S --arch=armv7h -brootfs/var/lib/pacman -rrootfs dialog wpa_supplicant links --noconfirm
 # install kernel
-cp $BUILD_ROOTDIR/CHIP-linux/arch/arm/boot/zImage rootfs/boot
+cp $BUILD_ROOTDIR/chip-linux/arch/arm/boot/zImage rootfs/boot
 # install dtbs
 mkdir rootfs/boot/dtbs
-cp $BUILD_ROOTDIR/CHIP-linux/arch/arm/boot/dts/*.dtb rootfs/boot/dtbs
+cp $BUILD_ROOTDIR/chip-linux/arch/arm/boot/dts/*.dtb rootfs/boot/dtbs
 # install kernel modules
-cd $BUILD_ROOTDIR/CHIP-linux
+cd $BUILD_ROOTDIR/chip-linux
 make INSTALL_MOD_PATH=../rootfs/ modules_install
 # install kernel firmware
 make INSTALL_FW_PATH=../rootfs/lib/firmware firmware_install
 # install kernel headers
 make INSTALL_HDR_PATH=../rootfs/usr headers_install
-# install RTL8723BS
-cd $BUILD_ROOTDIR/RTL8723BS
-make -C $BUILD_ROOTDIR/CHIP-linux M=$PWD/RTL8723BS INSTALL_MOD_PATH=../rootfs/ modules_install
+# install rtl8723bs
+cd $BUILD_ROOTDIR/rtl8723bs
+make -C $BUILD_ROOTDIR/chip-linux M=$PWD/rtl8723bs INSTALL_MOD_PATH=../rootfs/ modules_install
 # configure journalctl to use volatile storage
 cd $BUILD_ROOTDIR
 sed -i 's/.\?Storage=.*/Storage=volatile/' rootfs/etc/systemd/journald.conf
