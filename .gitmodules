@@ -1,6 +1,6 @@
 [submodule "RTL8723BS"]
 	path = RTL8723BS
-	url = https://github.com/NextThingCo/RTL8723BS.git
+	url = git@github.com:chip-community/rtl8723bs.git
 [submodule "CHIP-u-boot"]
 	path = CHIP-u-boot
 	url = https://github.com/NextThingCo/CHIP-u-boot.git
