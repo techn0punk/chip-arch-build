@@ -7,3 +7,12 @@
 [submodule "CHIP-linux"]
 	path = CHIP-linux
 	url = https://github.com/NextThingCo/CHIP-linux.git
+[submodule "chip-linux"]
+	path = chip-linux
+	url = git@github.com:chip-community/chip-linux.git
+[submodule "chip-u-boot"]
+	path = chip-u-boot
+	url = git@github.com:chip-community/chip-u-boot.git
+[submodule "rtl8723ds"]
+	path = rtl8723ds
+	url = git@github.com:chip-community/rtl8723ds.git
